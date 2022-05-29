@@ -1,16 +1,17 @@
 import React from 'react';
-import CTA from "./CTA";
-import HeaderSocials from './HeaderSocials';
+import "./home.scss";
+import CTA from '../../components/CTA';
+import HeaderSocials from '../../components/HeaderSocials';
 
-const Header = () => {
+const Home = () => {
   return (
-    <header>
-      <div className="container header__container">
+    <div className='home'>
+        <div className="container header__container">
         <h5>Hello I'm</h5>
         <h1>Hanniel Daniel</h1>
         <h5 className='text-light'>A Front-end Web-Developer</h5>
-        <CTA />
-        <HeaderSocials/>  
+        <CTA/>
+        <HeaderSocials />  
 
         <div className="me">
           <img src="" alt="" />
@@ -18,8 +19,8 @@ const Header = () => {
 
         <a href="#contact" className='scroll__down'>Scroll Down</a>
       </div>
-    </header>
+    </div>
   )
 }
 
-export default Header
+export default Home
