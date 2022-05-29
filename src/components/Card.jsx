@@ -7,19 +7,13 @@ function Card() {
     useEffect(() => {
         axios.get('https://api.github.com/users/HANNIEL21/repos')
             .then(res => {
-                const data = res.data;
-                setData(data)
-                return data;
+                setData(res.data)
             })
             .catch(err => console.log(err));
     }, []);
 
     return (
         <>
-            <div className="text">
-                <h2>Portfolio</h2>
-            </div>
-
             <div className='cards'>
                 {
                     data.map(item => (
@@ -33,7 +27,7 @@ function Card() {
                                         <p className='card__text'>{item.description}</p>
                                     </div>
                                     <div className="card__footer">
-                                        <a href={item.html_url} target='blank'>
+                                        <a href={`https://hanniel21.github.io/${item.name}/`} target='blank'>
                                             <button className='btn btn-primary'>View</button>
                                         </a>
                                         <a href={item.html_url} target='blank'>

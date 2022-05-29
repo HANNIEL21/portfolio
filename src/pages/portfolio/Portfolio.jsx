@@ -5,9 +5,10 @@ import './portfolio.scss';
 const Portfolio = () => {
 
   return (
-    <>
-      <Card/>
-    </>
+    <section id='portfolio'>
+      <h2>Portfolio</h2>
+      <Card />
+    </section>
   )
 }
 
